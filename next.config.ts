@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',           // This creates static files
+  output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true         // GitHub Pages doesn't support image optimization
+    unoptimized: true
   },
-  basePath: '',               // Important for root domain
+  basePath: '',
 };
 
 export default nextConfig;
