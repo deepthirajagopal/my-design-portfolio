@@ -1,12 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      { source: "/work", destination: "/case-studies", permanent: true },
-      { source: "/work/:slug", destination: "/case-studies/:slug", permanent: true },
-    ];
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',           // This creates static files
+  trailingSlash: true,
+  images: {
+    unoptimized: true         // GitHub Pages doesn't support image optimization
   },
+  basePath: '',               // Important for root domain
 };
 
 export default nextConfig;
