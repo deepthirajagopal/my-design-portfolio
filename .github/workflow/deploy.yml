@@ -26,6 +26,6 @@ jobs:
       
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # ← Change this if your build folder is 'build' or 'out'
+          path: ./out   # ← Change this if your build folder is 'build' or 'out'
       
       - uses: actions/deploy-pages@v4
