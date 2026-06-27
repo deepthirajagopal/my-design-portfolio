@@ -7,6 +7,7 @@ const protectedSlugs = new Set(
 
 export function middleware(request: NextRequest) {
   const match = request.nextUrl.pathname.match(/^\/case-studies\/([^/]+)$/);
+  
   if (!match) {
     return NextResponse.next();
   }
@@ -22,5 +23,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/case-studies/:slug"],
+  matcher: ["/case-studies/:slug*"],  // Updated matcher for safety
 };
